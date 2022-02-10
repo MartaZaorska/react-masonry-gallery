@@ -1,0 +1,117 @@
+.container, .container * {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.container {
+  --gap: 1em;
+  --imageBorder: none;
+  --items0: 1;
+  --items1: 2;
+  --items2: 3;
+  --items3: 4;
+  --items4: 5;
+  --items5: 6;
+  width: 100%;
+  height: auto;
+  column-count: var(--items0);
+  -moz-column-count: var(--items0);
+  -webkit-column-count: var(--items0);
+  column-gap: var(--gap);
+}
+
+
+.item {
+  margin: 0;
+  display: grid;
+  grid-template-rows: 1fr auto;
+  break-inside: avoid;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0px 10px 20px -9px rgba(0, 0, 0, 0.3);
+  margin-bottom: var(--gap);
+  border: var(--imageBorder);
+}
+
+.item p {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: fit-content;
+  background: rgba(40, 40, 40, 0.4);
+  backdrop-filter: blur(3px);
+  color: #fff;
+  padding: 0.7em;
+  font-size: 0.9em;
+  font-weight: bold;
+  line-height: 1.3;
+
+  transform: translateY(102%);
+  transition: all 0.1s ease;
+
+  display: none;
+}
+
+.item img {
+  grid-row: 1 / -1;
+  grid-column: 1;
+  max-width: 100%;
+  width: 100%;
+  display: block;
+  pointer-events: none;
+}
+
+.pointer .item {
+  cursor: pointer;
+}
+
+@media screen and (min-width: 576px){
+  .container {
+    column-count: var(--items1);
+    -moz-column-count: var(--items1);
+    -webkit-column-count: var(--items1);
+  }
+}
+
+@media screen and (min-width: 768px){
+  .container {
+    column-count: var(--items2);
+    -moz-column-count: var(--items2);
+    -webkit-column-count: var(--items2);
+  }
+}
+
+@media screen and (min-width: 992px){
+  .container {
+    column-count: var(--items3);
+    -moz-column-count: var(--items3);
+    -webkit-column-count: var(--items3);
+  }
+
+  .item p {
+    display: block;
+  }
+  
+  .item:hover p{
+    transform: translateY(0);
+  }
+}
+
+@media screen and (min-width: 1200px){
+  .container {
+    column-count: var(--items4);
+    -moz-column-count: var(--items4);
+    -webkit-column-count: var(--items4);
+  }
+}
+
+@media screen and (min-width: 1440px){
+  .container {
+    column-count: var(--items5);
+    -moz-column-count: var(--items5);
+    -webkit-column-count: var(--items5);
+  }
+}
