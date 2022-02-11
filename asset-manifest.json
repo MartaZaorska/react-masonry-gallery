@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/react-masonry-gallery/static/css/main.8d31344e.css",
+    "main.js": "/react-masonry-gallery/static/js/main.f0471a98.js",
+    "index.html": "/react-masonry-gallery/index.html",
+    "main.8d31344e.css.map": "/react-masonry-gallery/static/css/main.8d31344e.css.map",
+    "main.f0471a98.js.map": "/react-masonry-gallery/static/js/main.f0471a98.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.8d31344e.css",
+    "static/js/main.f0471a98.js"
+  ]
+}
